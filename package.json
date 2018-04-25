@@ -22,8 +22,8 @@
     "prepare": "npm run build",
     "test": "jest",
     "coverage": "jest --coverage",
-    "coveralls": "jest --coverage && cat ./test/coverage/lcov.info | coveralls",
-    "lint": "eslint src test --ignore-pattern test/coverage*"
+    "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls",
+    "lint": "eslint src test --ignore-pattern tests/coverage*"
   },
   "author": "Olle Lauri Boström <ollebostr@gmail.com> (https://github.com/ollelauribostrom)",
   "license": "MIT",
