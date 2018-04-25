@@ -21,13 +21,16 @@
     "build": "babel src -D -d dist",
     "prepare": "npm run build",
     "test": "jest",
-    "coverage": "jest --coverage",
+    "coverage": "jest --coverage --no-cache",
     "coveralls": "jest --coverage && cat ./tests/coverage/lcov.info | coveralls",
     "lint": "eslint src test --ignore-pattern tests/coverage*"
   },
   "author": "Olle Lauri Boström <ollebostr@gmail.com> (https://github.com/ollelauribostrom)",
   "license": "MIT",
   "jest": {
-    "coverageDirectory": "<rootDir>/tests/coverage"
+    "coverageDirectory": "<rootDir>/tests/coverage",
+    "collectCoverageFrom": [
+      "src/**/**.(js)"
+    ]
   }
 }
